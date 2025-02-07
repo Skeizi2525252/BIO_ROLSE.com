@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lacks crypto casino</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial Black', Arial, sans-serif;
+        }
+
+        body {
+            background: #000 url('https://i.pinimg.com/736x/7a/0f/e8/7a0fe8efc43331904cd6e580872c6219.jpg') no-repeat center center/cover;
+            color: white;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .badge {
+            background: rgba(138, 43, 226, 0.1);
+            color: #8a2be2;
+            padding: 15px 30px;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 20px auto;
+            animation: pulse 2s infinite;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .main-title {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            color: #aaa;
+            text-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.1);
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .image-link {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            width: 200px;
+            transition: transform 0.3s;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 10px;
+        }
+
+        .image-link:hover {
+            transform: scale(1.05);
+        }
+
+        .game-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: rgba(138, 43, 226, 0.1);
+            color: #8a2be2;
+            padding: 15px 30px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .game-btn:hover {
+            background: rgba(138, 43, 226, 0.2);
+        }
+
+        /* Анимации */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        /* Стили игры */
+        .game-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 5px;
+            perspective: 1000px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            background: rgba(34, 34, 34, 0.8);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            cursor: pointer;
+            transition: all 0.3s;
+            transform-style: preserve-3d;
+        }
+
+        .cell:hover {
+            background: rgba(51, 51, 51, 0.8);
+            transform: rotateY(10deg) scale(1.1);
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #8a2be2;
+            text-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="badge">Rolse</div>
+    
+    <div class="header">
+        <h1 class="main-title">Lacks crypto casino</h1>
+        <p class="subtitle">Телеграм-бот с авторскими играми и крупными заносами<br>
+        Аренда скрипта - @Rolse_tg</p>
+    </div>
+
+    <div class="content">
+        <p>Добро пожаловать в Lacks Crypto Casino! Мы предлагаем уникальные игры, крупные заносы и возможность аренды скрипта для вашего собственного казино.</p>
+        <p>Наши игры разработаны с использованием передовых технологий, что обеспечивает честность и прозрачность каждого раунда. Присоединяйтесь к нашему сообществу и испытайте удачу!</p>
+        <p>Для связи с нами используйте Telegram: @Rolse_tg. Мы всегда рады новым игрокам и партнерам!</p>
+    </div>
+
+    <a href="https://t.me/Rolse_Home" target="_blank">
+        <img src="https://i.pinimg.com/736x/7b/e7/9d/7be79db6fe4f97a7bdfb8bb6fdc5fc03.jpg" 
+             alt="Telegram" 
+             class="image-link">
+    </a>
+
+    <button class="game-btn" onclick="toggleGame()">🎮 Играть</button>
+
+    <div class="game-container" id="game">
+        <div class="grid"></div>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        let currentPlayer = 'X';
+        const gameGrid = document.querySelector('.grid');
+        const resultDisplay = document.getElementById('result');
+        const winningCombinations = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8],
+            [0, 3, 6], [1, 4, 7], [2, 5, 8],
+            [0, 4, 8], [2, 4, 6]
+        ];
+
+        for(let i = 0; i < 9; i++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            cell.addEventListener('click', () => makeMove(cell));
+            gameGrid.appendChild(cell);
+        }
+
+        function makeMove(cell) {
+            if(!cell.textContent && !resultDisplay.textContent) {
+                cell.textContent = currentPlayer;
+                cell.style.color = currentPlayer === 'X' ? '#8a2be2' : '#ff00ff';
+                checkWinner();
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                if(currentPlayer === 'O') setTimeout(botMove, 500);
+            }
+        }
+
+        function botMove() {
+            const emptyCells = [...document.querySelectorAll('.cell')]
+                .filter(cell => !cell.textContent);
+            if(emptyCells.length) {
+                const randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+                makeMove(randomCell);
+            }
+        }
+
+        function checkWinner() {
+            const cells = document.querySelectorAll('.cell');
+            for (let combo of winningCombinations) {
+                const [a, b, c] = combo;
+                if (cells[a].textContent && 
+                    cells[a].textContent === cells[b].textContent && 
+                    cells[a].textContent === cells[c].textContent) {
+                    resultDisplay.textContent = `Победил ${cells[a].textContent}!`;
+                    return;
+                }
+            }
+            if ([...cells].every(cell => cell.textContent)) {
+                resultDisplay.textContent = 'Ничья!';
+            }
+        }
+
+        function toggleGame() {
+            const game = document.getElementById('game');
+            game.style.display = game.style.display === 'block' ? 'none' : 'block';
+            if (game.style.display === 'block') {
+                resetGame();
+            }
+        }
+
+        function resetGame() {
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach(cell => {
+                cell.textContent = '';
+                cell.style.color = '';
+            });
+            resultDisplay.textContent = '';
+            currentPlayer = 'X';
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            document.body.style.backgroundPosition = 
+                `${x * 50}% ${y * 50}%`;
+        });
+    </script>
+</body>
+</html>
